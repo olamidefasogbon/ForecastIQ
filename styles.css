@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    background: #222;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    font-family: 'Open Sans', sans-serif;
+    font-size: 105%;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background-color: #7c7c7c2b;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #7c7c7c6b;
+    color: #fff;
+}
+
+button:active {
+    background: #fff;
+    color: #222;
+}
+
+button:focus {
+    outline: blue;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: .4em 1em;
+    border-radius: 18px;
+    background-color: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 100%;
+    width: calc(100% - 100px);
+}
+
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 1.875rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    margin-bottom: 5rem;
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1.temp {
+    font-size: 200%;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading::after {
+    visibility: visible;
+    content: "Loading Cities...";
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.weather.loading::before {
+    visibility: visible;
+    content: "";
+    background: #fff;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: .8rem;
+    color: #fff;
+    display: block;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: brown;
+    text-decoration: wavy underline;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        padding: auto;
+        margin: auto;
+    }
+
+    .card {
+        width: 100vw;
+        max-width: 100vh;
+        padding: 2em;
+        margin: 1em;
+    }
+
+    .weather.loading {
+        max-height: 20px;
+    }
+
+    .weather.loading::after {
+        font-size: 1rem;
+        left: 0;
+        top: 0;
+    }
+
+    .weather.loading::before {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100vw;
+        max-width: 100vh;
+        padding: 2em;
+        margin: 1em;
+    }
+
+    .weather.loading {
+        max-height: 20px;
+    }
+
+    .weather.loading::after {
+        font-size: 1rem;
+        left: 0;
+        top: 0;
+    }
+
+    .weather.loading::before {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+
